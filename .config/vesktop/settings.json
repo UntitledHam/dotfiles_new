@@ -1,0 +1,10 @@
+{
+    "minimizeToTray": "on",
+    "discordBranch": "ptb",
+    "arRPC": "on",
+    "splashColor": "rgb(187, 199, 205)",
+    "splashBackground": "rgb(5, 5, 31)",
+    "splashTheming": true,
+    "enableMenu": false,
+    "disableMinSize": true
+}

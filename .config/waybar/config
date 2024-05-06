@@ -1,0 +1,101 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray","cpu", "memory", "temperature", "pulseaudio", "battery"],
+
+    "modules": {
+      "spacing": 10,
+    },
+
+      "hyprland/workspaces": {
+        "disable-markup": false,
+        "format": "{icon}",
+        "format-icons": {
+            "11": "1",
+            "12": "2",
+            "13": "3",
+            "14": "4",
+            "15": "5",
+            "16": "6",
+	    "17": "7",
+	    "18": "8",
+	    "19": "9",
+	    "20": "10",
+        }
+    }, 
+    "clock": {
+        "format": "{:%Y-%m-%d | %H:%M}",
+        "on-click": "gnome-calendar"
+    },
+    "hyprland/window": {
+        "format": "  >> {}",
+        "separate-outputs": true,
+	"max-length": 120,
+    },
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+    },
+
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon} </span>  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon} </span>  {capacity}%",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon }</span>  Charged",
+        "interval": 5,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": true, 
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-icons": {
+                 "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+       },
+    "tray": {
+        "icon-size": 22,
+	"spacing": 2,
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Papirus",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%", // Icon: microchip
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+    "memory": {
+        "interval": 5,
+        "format": "󰍛  {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+ }  
